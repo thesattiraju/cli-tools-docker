@@ -1,12 +1,7 @@
-pool:
-  vmImage: 'Ubuntu-16.04'
-
 variables:
   repoName: 'clitools'
-  dockerEndpoint: ''
 
 jobs:
-
 - job: BuildImage
   displayName: Build
 
