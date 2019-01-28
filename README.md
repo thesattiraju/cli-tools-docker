@@ -1,13 +1,12 @@
-# cli tools docker
+# CLI Tools Docker based
 
-Docker images for various tools.
-These images are based on alpine.
+Docker images for various tools. These images are based on alpine and pushed to docker hub registry under `clitools`.
 
 Usage: `docker run clitools/<tool-name>`
 
 Example: `docker run clitools/kubectl get svc`
 
-## Prereq for kubernetes tools
+### Prereq for kubernetes tools
 
 You need to mount your kubeconfig to the container for fetching information from cluster.
 
