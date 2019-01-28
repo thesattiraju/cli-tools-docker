@@ -1,3 +1,4 @@
 clitools/helm
+clitools/img
 clitools/kubectl
 clitools/kustomize

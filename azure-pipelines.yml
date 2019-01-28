@@ -17,6 +17,13 @@ jobs:
       dockerFile: 'helm/Dockerfile'
   
   - task: Docker@1
+    displayName: 'Build img image'
+    inputs:
+      imageName: '$(repoName)/img'
+      command: build
+      dockerFile: 'img/Dockerfile'
+
+  - task: Docker@1
     displayName: 'Build kubectl image'
     inputs:
       imageName: '$(repoName)/kubectl'
