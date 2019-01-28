@@ -1,0 +1,45 @@
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+variables:
+  repoName: 'clitools'
+  dockerEndpoint: ''
+
+jobs:
+
+- job: BuildImage
+  displayName: Build
+
+  pool:
+    vmImage: 'Ubuntu-16.04'
+
+  steps:
+  - task: Docker@1
+    displayName: 'Build helm image'
+    inputs:
+      imageName: '$(repoName)/helm'
+      command: build
+      dockerFile: 'helm/Dockerfile'
+  
+  - task: Docker@1
+    displayName: 'Build kubectl image'
+    inputs:
+      imageName: '$(repoName)/kubectl'
+      command: build
+      dockerFile: 'kubectl/Dockerfile'
+
+  - task: Docker@1
+    displayName: 'Build an image'
+    inputs:
+      imageName: '$(repoName)/kustomize'
+      command: build
+      dockerFile: 'kustomize/Dockerfile'
+
+  - task: Docker@1
+    displayName: 'Push an image'
+    inputs:
+      containerregistrytype: 'Container Registry'
+      dockerRegistryEndpoint: clitools
+      command: push
+      pushMultipleImages: true
+      imageNamesPath: .docker/images
