@@ -10,6 +10,6 @@ Example: `docker run clitools/kubectl get svc`
 
 You need to mount your kubeconfig to the container for fetching information from cluster.
 
-Say your kubeconfig is in a directory /home/user/.kube, mount this directory to the container by adding this to your run command `-m /home/user/.kube:/tmp` and set the KUBECONFIG environment variable on the flow.
+Say your kubeconfig is in a directory /home/user/.kube, mount this directory to the container by adding this to your run command `-v /home/user/.kube:/tmp` and set the KUBECONFIG environment variable on the flow.
 
 You need to add `-v /home/user/.kube:/tmp --env KUBECONFIG=/tmp/config` to your docker run commands
