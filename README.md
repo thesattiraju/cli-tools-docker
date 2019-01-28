@@ -3,4 +3,6 @@
 Docker images for various tools.
 These images are based on alpine.
 
-Usage: `docker run ds-ms/<tool-name>`
+Usage: `docker run clitools/<tool-name>`
+
+Example: `docker run clitools/kubectl get svc`
