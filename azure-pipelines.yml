@@ -24,7 +24,7 @@ jobs:
       dockerFile: 'kubectl/Dockerfile'
 
   - task: Docker@1
-    displayName: 'Build an image'
+    displayName: 'Build kustomize image'
     inputs:
       imageName: '$(repoName)/kustomize'
       command: build
