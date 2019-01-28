@@ -1,6 +1,8 @@
 # CLI Tools Docker based
 
-Docker images for various tools. These images are based on alpine and pushed to docker hub registry under `clitools`.
+Docker images with cli tools.
+
+These images are based on alpine and pushed to docker hub registry under `clitools`.
 
 Usage: `docker run clitools/<tool-name>`
 
