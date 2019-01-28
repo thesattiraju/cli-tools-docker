@@ -31,7 +31,7 @@ jobs:
       dockerFile: 'kustomize/Dockerfile'
 
   - task: Docker@1
-    displayName: 'Push an image'
+    displayName: 'Push images'
     inputs:
       containerregistrytype: 'Container Registry'
       dockerRegistryEndpoint: clitools
