@@ -1,0 +1,17 @@
+name: Docker Image CI
+
+on: [push]
+
+jobs:
+
+  build:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@master
+    - uses: azure/container-actions/docker-login@adding-headers
+      with: 
+        username: ${{ secrets.username }} 
+        passowrd: ${{ secrets.password }} 
+    - run: docker pull clitools/kubectl
