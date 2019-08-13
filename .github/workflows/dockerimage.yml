@@ -21,7 +21,7 @@ jobs:
         docker build . --file kubectl/Dockerfile --tag cli-tools-docker/kubectl:latest
         
     - name: Login
-      uses: azure/container-actions/docker-login@master
+      uses: azure/container-actions/docker-login@adding-headers
       with: 
         username: ${{ secrets.username }}
         password: ${{ secrets.password }} 
