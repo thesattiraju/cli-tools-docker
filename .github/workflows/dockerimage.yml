@@ -10,7 +10,7 @@ jobs:
  
     steps:
     - uses: actions/checkout@master
-    - uses: azure/container-actions/docker-login@adding-headers
+    - uses: azure/container-actions/docker-login@master
       with: 
         username: ${{ secrets.username }} 
         password: ${{ secrets.password }} 
