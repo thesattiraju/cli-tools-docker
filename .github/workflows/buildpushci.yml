@@ -1,0 +1,38 @@
+name: CLI tools Docker CI
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@master
+    - name: Docker login
+      uses: azure/container-actions/docker-login@master
+      with: 
+        username: ${{ secrets.username }} 
+        password: ${{ secrets.password }} 
+    - name: Build and push
+      run: |
+        cd kubectl
+        docker build . -t clitools/kubectl
+        docker push clitools/kubectl
+        cd ..
+        
+        cd img
+        docker build . -t clitools/img
+        docker push clitools/img
+        cd ..
+        
+        cd kustomize
+        docker build . -t clitools/kustomize
+        docker push clitools/kustomize
+        cd ..
+        
+        cd kustomize
+        docker build . -t clitools/kustomize
+        docker push clitools/kustomize
