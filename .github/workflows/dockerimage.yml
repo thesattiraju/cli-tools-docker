@@ -25,7 +25,7 @@ jobs:
       with: 
         username: ${{ secrets.username }}
         password: ${{ secrets.password }} 
-        login-server: docker.io
+        login-server: https://index.docker.io
     
     - run: |
         docker push cli-tools-docker/kustomize:latest
