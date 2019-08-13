@@ -25,8 +25,8 @@ jobs:
       with: 
         username: ${{ secrets.username }}
         password: ${{ secrets.password }} 
-   
-   - run: |
+    
+    - run: |
         docker push cli-tools-docker/kustomize:latest
         docker push cli-tools-docker/helm:latest
         docker push cli-tools-docker/img:latest
