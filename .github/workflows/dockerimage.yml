@@ -1,6 +1,9 @@
-name: Docker Image CI
+name: CLI tools Docker CI
 
-on: [push]
+on:
+  push:
+    branches:
+    - master
 
 jobs:
 
