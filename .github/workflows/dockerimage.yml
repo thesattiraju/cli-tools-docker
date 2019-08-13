@@ -27,7 +27,6 @@ jobs:
         password: ${{ secrets.password }} 
     
     - run: |
-        cat $DOCKER_CONFIG/config.json
         docker push cli-tools-docker/kustomize:latest
         docker push cli-tools-docker/helm:latest
         docker push cli-tools-docker/img:latest
