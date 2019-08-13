@@ -1,10 +1,5 @@
 # CLI Tools Docker based
 
-[![Build & Test][build-badge]][win-build]
-
-[build-badge]: https://dev.azure.com/deepaksattiraju/clitools/_apis/build/status/ds-ms.cli-tools-docker
-[win-build]: https://dev.azure.com/deepaksattiraju/clitools/_build/latest?definitionId=88
-
 Docker images with cli tools.
 
 These images are based on alpine and pushed to docker hub registry under `clitools`.
