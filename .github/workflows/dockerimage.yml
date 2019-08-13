@@ -13,5 +13,5 @@ jobs:
     - uses: azure/container-actions/docker-login@adding-headers
       with: 
         username: ${{ secrets.username }} 
-        passowrd: ${{ secrets.password }} 
+        password: ${{ secrets.password }} 
     - run: docker pull clitools/kubectl
