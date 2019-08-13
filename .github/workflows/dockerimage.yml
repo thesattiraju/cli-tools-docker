@@ -14,4 +14,7 @@ jobs:
       with: 
         username: ${{ secrets.username }} 
         password: ${{ secrets.password }} 
-    - run: docker pull clitools/kubectl
+    - run: |
+        cd kubectl
+        docker build . -t clitools/kubectl
+        docker push clitools/kubectl
